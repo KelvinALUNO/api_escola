@@ -1,6 +1,6 @@
 const { DataTypes } = require('sequelize')
-const { connection }  = require('../database/connection')
-const User = connection.define('user',{
+const { connection } = require('../database/connection')
+const User = connection.define('user', {
     nome: {
         type: DataTypes.STRING
     },
@@ -9,11 +9,9 @@ const User = connection.define('user',{
     },
     password: {
         type: DataTypes.STRING,
-        validate:{
-            len:{args:[1,100], msg: 'senha precisa ter entre 5 a 10 char.'}
-        }
     },
-    createAt: {
-        type: DataTypes.STRING
-    }
+    createAt: DataTypes.DATE,
+    createAt: DataTypes.DATE,
 })
+
+module.exports = User
